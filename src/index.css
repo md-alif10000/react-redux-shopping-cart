@@ -126,7 +126,7 @@ footer{
   justify-content: space-between;
   padding: 0.5rem;
   margin: 1rem;
-  border-bottom: 1rem #c0c0c0 solid;
+  border-bottom: 0.1rem #c0c0c0 solid;
 
 }
 .filter div{
@@ -202,4 +202,31 @@ form{
 input{
   padding: 1rem;
   border: 0.1rem #c0c0c0 solid;
+}
+
+
+/* 
+Product Details */
+.product-details{
+  display: flex;
+  flex-wrap: wrap;
+  border: 0.1 rem #c0c0c0 solid;
+  justify-content: space-between;
+  max-height: 96vh;
+
+}
+.product-details img{
+  max-height: 100vh;
+  max-width: 46rem;
+  margin: 0 auto;
+}
+.product-details-description{
+  flex: 1 1;
+  margin: 1rem;
+}
+.close-modal{
+  position: absolute;
+  right: 1rem;
+  top: 2.5rem;
+  cursor: pointer;
 }
