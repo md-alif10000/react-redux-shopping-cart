@@ -21,6 +21,7 @@ const productSchema = new mongoose.Schema({
 const Product = mongoose.model("products", productSchema);
 app.get("/api/products", async (req, res) => {
 	const products = await Product.find({});
+	console.log('Request to get products')
 	res.send(products);
 });
 app.post("/api/products", async (req, res) => {

@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import formatCurrency from "../util";
-import Fade from 'react-reveal/Fade'
+import Fade from "react-reveal/Fade";
 
 export default class Cart extends Component {
 	constructor(props) {
 		super();
 		this.state = {
-            name:'',
-            email:'',
-            address:'',
+			name: "",
+			email: "",
+			address: "",
 			showCkeckout: false,
 		};
 	}
@@ -16,17 +16,16 @@ export default class Cart extends Component {
 	handleInput = (e) => {
 		this.setState({ [e.target.name]: e.target.value });
 	};
-    createOrder=(e)=>{
-        e.preventDefault()
-        const order={
-            name:this.state.name,
-            email:this.state.email,
-            address:this.state.address,
-            cartItems:this.props.cartItems
-
-        }
-        this.props.createOrder(order)
-    }
+	createOrder = (e) => {
+		e.preventDefault();
+		const order = {
+			name: this.state.name,
+			email: this.state.email,
+			address: this.state.address,
+			cartItems: this.props.cartItems,
+		};
+		this.props.createOrder(order);
+	};
 	render() {
 		const { cartItems } = this.props;
 
